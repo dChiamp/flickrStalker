@@ -1,0 +1,48 @@
+FLICKR STALKR - Again, this is a rather hefty synthesis challenge! 
+
+The goal of this assignment is to get images from flickr that have geo tags and (creepily) map them using Google Map's street view API.  Check out Assignment_Solution1.png & Assignment_Solution2.png to see the solution in action.
+
+I've provided:
+	* A project with animate.css already set up
+	* A basic search page with a search result template div for you to clone.  There's a spot for:
+		- Flickr image
+		- Street view image
+		- Flickr username
+		- Flickr title
+	* A form with a text input (that has autocomplete turned off)
+
+I'm going to give you the order in which you should tackle the parts of this project:
+	1. Get the flickr API search working.
+	2. Put the flickr image, username & title on the page.
+	3. Get the street view image for each flickr image.
+	5. Add enhancements, some ideas:
+		- CSS3 animations to make the results fade in
+		- Animation delays so that the street view image loads after the flickr image
+		- Animation delays so that the search results load one after another
+		- CSS3 transitions to make the street view image "zoom" when the mouse hovers over it (https://css-tricks.com/almanac/properties/t/transition/)
+		- Extend the form so that users can control whether they are searching tags or text.
+		- Extend the form so that users can control how the search results are sorted.
+
+Flickr:
+	* You'll probably want to do a search for photos using "method=flickr.photos.search".
+	* You can sort the results in different ways.  I recommend relevance, interestingness-desc, date-taken-desc or interestingness.  Or, you could create another form input that allows the user to choose :) 
+	* You can search using tags or text.  I recommend tags.  Or, you could create another form input...
+	* Is there a way to guarantee that the photos have a geolocation?  How do you get the username?
+	* Relevant documentation:
+		- https://www.flickr.com/services/api/
+		- https://www.flickr.com/services/api/misc.overview.html
+		- https://www.flickr.com/services/api/flickr.photos.search.html
+	* You have to do a little work to construct an image URL from a search result: https://www.flickr.com/services/api/misc.urls.html
+
+Google Street View Image API:
+	* This is a bit different than other APIs.  You don't have to make a request using an XMLHttpRequest object.  The API call URL can be directly put into the src tag on an image.  Try it out in the browser.
+	* Documentation:
+		- https://developers.google.com/maps/documentation/streetview/intro
+
+General tips
+	* COMMENT YOUR CODE!  Leave notes that explain what the different parts of 
+	  your program do.
+	* Debug small chunks of code and debug often.  Don't try to code 
+	  everything all at once!
+	* Plan before you start coding.  Paper & pencil are helpful in wrapping
+	  your head around a problem.

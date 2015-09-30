@@ -1,0 +1,101 @@
+/* ALL ELEMENTS */
+
+* {
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* BACKGROUND */
+
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+
+/* WRAPPER FOR RESULTS */
+
+#wrap {
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+/* INPUT FORM */
+
+#search-form {
+	border-radius: 2px;
+	width: 100%;
+	margin: 2% 0;
+	background-color: white;
+	color: #323a45;
+}
+#search-form > input {
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	margin: 0;
+	background-color: white;
+	color: #323a45;
+	font-size: 3em;
+	letter-spacing: 2px;
+	font-weight: 300;
+}
+
+
+/* SEARCH RESULTS */
+
+.tracked-image {
+	position: relative;
+	width: 100%;
+	margin: 30px 0;
+	box-shadow: #DADADA 0 2px 2px;
+	border-radius: 2px;
+}
+.tracked-image .images-wrap {
+	position: relative;
+	width: 100%;
+}
+.flickr-image {	
+	width: 100%;
+	height: 550px;
+	object-fit: cover;
+	border-radius: 2px;
+}
+.streetview-image {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	width: 35%;
+	height: 200px;
+	border: 5px solid white;
+	object-fit: cover;
+	border-radius: 2px;
+	z-index: 1; /* Puts street view image on top of username */ 
+	transition: all 0.4s ease;
+}
+.streetview-image:hover {
+	width: 70%;
+	height: 400px;
+}
+.tracked-image .flickr-username {
+	font-size: 3em;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;	
+	color: white;
+	text-shadow: 0 1px 5px black;
+	width: 50%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.tracked-image .flickr-title {
+	font-size: 1.5em;
+	color: #404040;
+	padding: 5px 10px 20px 10px;
+	border-radius: 2px;
+}
